@@ -20,7 +20,7 @@ if test -f "$FILE"; then
 	echo ""
 else
 	touch ${basedir}/notes/daily/${today}.md
-	echo -e "xx:xx - xx:xx\n\n# Meetings:\n- \n\n\n# TODOs\n- " > ${basedir}/notes/daily/${today}.md
+	echo -e "xx:xx - xx:xx\n\n# Meetings:\n- \n\n\n# TODOs\n- \n\n\n# Notes\n- " > ${basedir}/notes/daily/${today}.md
 	echo "Created daily notes file"
 	echo ""
 fi
