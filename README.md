@@ -24,7 +24,12 @@ xx:xx - xx:xx
 # Meetings:
 - 
 
+
 # TODOs
+- 
+
+
+# Notes
 - 
 ```
 
@@ -40,6 +45,7 @@ ${PARTICIPANTS}
 
 ## TODOs
 - 
+
 ## Notes
 - 
 ```
