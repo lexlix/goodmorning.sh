@@ -32,14 +32,16 @@ do
 	read -p "Create a Meeting? (y/N): " confirm && [[ $confirm == [yY] || $confirm == [yY][eE][sS] ]] || exit 1
 	read -p "Meeting name: " meetingname
 
-	FILE=${basedir}/notes/meetings/${today}_${meetingname}.md
+	meetingfilename="$(sed 's/ /-/g' <<<$meetingname)"
+
+	FILE=${basedir}/notes/meetings/${today}_${meetingfilename}.md
 	if test -f "$FILE"; then
   	echo "Meeting already exists."
 		echo ""
 	else
 		read -p "Participants: " participants
 		read -p "Time: " time
-		echo -e "${time}\n\n${participants}\n\n# ${meetingname} \n\n## TODOs\n- \n\n## Notes\n- " > ${basedir}/notes/meetings/${today}_${meetingname}.md
+		echo -e "${time}\n\n${participants}\n\n# ${meetingname} \n\n## TODOs\n- \n\n## Notes\n- " > ${basedir}/notes/meetings/${today}_${meetingfilename}.md
 		echo "Created meeting notes file"
 		echo ""
 	fi
